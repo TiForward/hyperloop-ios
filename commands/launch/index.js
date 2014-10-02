@@ -27,7 +27,7 @@ module.exports = new Command(
 					hyperloop.execCommand('package',state,next);
 				});
 			}
-
+		
 			var target = options.target || /(i386|simulator)/.test(arch) ? 'simulator' : null,
 				targetObj = ioslib[target],
 				platform = /(i386|simulator)/.test(arch) ? 'simulator' : 'os',
@@ -48,15 +48,19 @@ module.exports = new Command(
 				function logger(label,message){
 					log[label] && log[label](message);
 				}
-
+				 	//console.log(build_dir);
 				var launchOptions = {
-					build_dir: build_dir,
+					appPath: build_dir,
 					logger: options.logger || logger,
 					callback: next,
 					hide: options.hide,
 					auto_exit: options.auto_exit
 				};
-				targetObj.launch(launchOptions);
+				
+				// I set this to null for now
+				// it probably should have a real UDID
+				var	simUDID=null;
+				targetObj.launch(simUDID,launchOptions);
 			});
 
 			async.waterfall(tasks,function(err,detail){
