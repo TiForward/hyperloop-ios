@@ -12,6 +12,7 @@ var should = require('should'),
 	log = hyperloop.log,
 	compiler = hyperloop.compiler.ast,
 	ioscompiler = require(path.join(__dirname, '..', 'lib', 'compiler.js')),
+	xcode = require(path.join(__dirname, '..', 'lib', 'xcode.js')),
 	ioslib = require(path.join(__dirname, '..', 'lib', 'library.js')),
 	common_examples = path.join(hyperloop.dirname,'examples'),
 	options;

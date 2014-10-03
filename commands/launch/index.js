@@ -52,9 +52,8 @@ module.exports = new Command(
 				var launchOptions = {
 					appPath: build_dir,
 					logger: options.logger || logger,
-					callback: next,
 					hide: options.hide,
-					auto_exit: options.auto_exit
+					autoExit: options.autoExit
 				};
 				
 				// I set this to null for now
