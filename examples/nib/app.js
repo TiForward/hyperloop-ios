@@ -9,7 +9,7 @@ var xbundle = NSBundle.mainBundle();
 
 function nibToView(name) {
   var xib = xbundle.loadNibNamed(name, null, null);
-  var xview = xib.lastObject();
+  var xview = xib.lastObject;
   xview.frame = UIScreen.mainScreen().applicationFrame;
   return xview;
 }
