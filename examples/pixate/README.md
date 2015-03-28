@@ -5,7 +5,7 @@ This example demonstrates how to use external framework with Hyperloop. You can 
 ## Install
 
 - Download latest Pixate Freestyle from [https://github.com/Pixate/pixate-freestyle-ios/releases](https://github.com/Pixate/pixate-freestyle-ios/releases)
-- Extract donwlowded zip and place PixateFreestyle.framework into anywhere, like PIXATE_FRAMEWORK_DIR
+- Extract downloaded zip and place PixateFreestyle.framework into anywhere, like PIXATE_FRAMEWORK_DIR
 
 ## Run
 

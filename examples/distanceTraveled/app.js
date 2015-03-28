@@ -1,5 +1,23 @@
 "use hyperloop"
 
+/* this wont work until we can figure out how to have an Info.plist file included
+we need NSLocationAlwaysUsageDescription or  NSLocationWhenInUsageDescription with a string explaining.
+the XML would look something like:
+
+<ios>
+     <plist>
+         <dict>
+             <key>NSLocationAlwaysUsageDescription</key>
+             <string>Specify the reason for accessing the user's location information.
+					This appears in the alert dialog when asking the user for permission to
+					access their location.</string>
+         </dict>
+     </plist>
+ </ios>
+
+*/
+
+
 var TARGET_FPS = 60;
 
 /*
@@ -34,7 +52,7 @@ var calculateManually = false,
 
 function handleNewPosition(locationManager, didUpdateLocations) {
 	var locations = didUpdateLocations.cast('NSArray');
-	for (var i = 0, iL = locations.count(); i < iL; i++) {
+	for (var i = 0, iL = locations.count; i < iL; i++) {
 		var location = locations.objectAtIndex(i).cast('CLLocation'),
 			coordinate = location.coordinate;
 		var _lastLocation = lastLocation.cast('CLLocation'); // TODO need to cast explicitly here

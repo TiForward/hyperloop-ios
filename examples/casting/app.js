@@ -14,7 +14,7 @@ array.addObject(str);
 // cast the NSString back when we pull out the string from the array
 var str2 = array.objectAtIndex(0).cast('NSString');
 
-console.log(str2.length());
+console.log(str2.length);
 
 /*
  Create our simple UI.
