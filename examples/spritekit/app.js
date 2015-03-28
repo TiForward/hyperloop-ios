@@ -18,14 +18,14 @@ function textureArrayFromSlices(slices) {
 	var manager = NSFileManager.defaultManager();
 
 	// get the path to the given slices folder
-	var path = NSBundle.mainBundle().resourcePath().stringByAppendingString(NSString.stringWithUTF8String('/' + slices));
+	var path = NSBundle.mainBundle().resourcePath.stringByAppendingString(NSString.stringWithUTF8String('/' + slices));
 
 	// get the list of slice images
 	var files = manager.contentsOfDirectoryAtPath(path, null);
 
 	// Create an array of the images as textures
 	var textures = NSMutableArray.array();
-	for (var i = 0; i < files.count(); i++) {
+	for (var i = 0; i < files.count; i++) {
 
 		// make sure we have an actual image
 		if (/^Slice\-\d+\.png$/.test(files.objectAtIndex(i))) {
