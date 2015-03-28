@@ -1,8 +1,10 @@
 "use hyperloop"
+/* this also wants to bring in SceneKit. really confused */
+
 var array = NSMutableArray.array();
 array.cast(NSMutableArray).addObject(NSString.stringWithUTF8String("abc"));
 var obj = array.objectAtIndex(0);
-var length = obj.cast(NSString).length();
+var length = obj.cast(NSString).length;
 var numLen = NSNumber.numberWithDouble(length);
 //var i = "a" instanceof NSNumber; 
 //var i=numLen instanceof numLen;

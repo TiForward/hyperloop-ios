@@ -1,5 +1,5 @@
 "use hyperloop"
-
+/* this example fails. likely due to not having all the frameworks included in the readme */
 // enum
 var center = NSTextAlignmentCenter;
 

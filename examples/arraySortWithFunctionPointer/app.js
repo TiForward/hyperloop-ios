@@ -1,5 +1,7 @@
 "use hyperloop"
-
+/*
+This example fails. Hyperloop wants to bring SceneKit in. why?
+*/
 var array = NSMutableArray.array();
 array.addObject(NSNumber.numberWithInt(3));
 array.addObject(NSNumber.numberWithInt(2));
