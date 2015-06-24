@@ -14,7 +14,7 @@
 #ifdef USE_TIJSCORE
 
 #define HYPERLOOP_EXCLUDE_JSCORE_IMPORT
-#include <TiCore/TiCore.h>
+#include <JavaScriptCore/TiCore.h>
 
 #define JSGlobalContextRef TiGlobalContextRef
 #define JSContextGetGlobalObject TiContextGetGlobalObject
