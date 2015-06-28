@@ -39,7 +39,9 @@ module.exports = new Command(
 			tasks.push(function (next) {
 				prepare(state, next);
 			});
-
+			
+			
+			// this is where we would extend for extensions and possibly watchos apps.
 			async.series(tasks,function(err){
 				if (err) { return done(err); }
 				switch (options.packageType) {
